@@ -14,6 +14,14 @@ export function sortArray<T>(
 	return [...arr].sort(compareFunction);
 }
 
+export function filterArray<T>(arr: T[], field: keyof T, query: string): T[] {
+    return arr.filter((item: T) => {
+
+		const value = item[field] as string;
+		return value.trim().toLowerCase().includes(query.toLowerCase());
+	});
+}
+
 export function getLocalDate(date: string) {
 	return new Date(date).toLocaleDateString(navigator.language, {
 		year: "numeric",
@@ -22,3 +30,5 @@ export function getLocalDate(date: string) {
 		hour: "2-digit",
 	});
 }
+
+
