@@ -6,12 +6,12 @@
 }
 
 #navbar {
-	border: 1px solid red;
+	border: 1px solid #ddd;
 
 	display: flex;
 	flex-direction: row;
 }
 
 form input {
-	border: 1px solid red;
+	border: 1px solid #ddd;
 }

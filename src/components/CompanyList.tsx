@@ -10,7 +10,6 @@ export default function CompanyList({
     orderBy: string;
     onClick: (event: React.MouseEvent<HTMLElement>) => void;
 }) {
-    
     const listCompanies = companies.map((el: CompanyInterface) => {
         return (
             <tr key={el.id}>
